@@ -20,7 +20,7 @@ def plot_progression(Y, C):
         plt.show()
 
 
-def plot_model(forward_function, Ys, W_k, b_k, h, C, n):
+def plot_model1(forward_function, Ys, W_k, b_k, h, C, n):
     '''
     Make a map that shows what part of the 2d plane is classified as belonging to which spiral arm.
     Also plot the training data in Ys, C.
@@ -43,7 +43,7 @@ def plot_model(forward_function, Ys, W_k, b_k, h, C, n):
     plot_contours(*coordinates, Z, l, Ys, C.flatten())
 
 
-def plot_separation(last_function, Ys, omega, my, C, n):
+def plot_separation1(last_function, Ys, omega, my, C, n):
     '''
     Show how the training data is represented in the last layer. Also maps the rest of the possible points in the plane.
     
