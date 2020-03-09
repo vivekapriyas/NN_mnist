@@ -20,7 +20,7 @@ def plot_progression(Y, C):
         plt.show()
 
 
-def plot_model(forward_function, Ys, C, n):
+def plot_model(forward_function, Ys, W_k, b_k, h, C, n):
     '''
     Make a map that shows what part of the 2d plane is classified as belonging to which spiral arm.
     Also plot the training data in Ys, C.
@@ -36,14 +36,14 @@ def plot_model(forward_function, Ys, C, n):
     '''
     grid, coordinates = get_discretization(Ys, n)
 
-    Z = forward_function(grid)
+    Z = forward_function(grid, W_k, b_k, h)
     l = np.linspace(0,1,8)
     l = np.array([shading(x) for x in l])
 
     plot_contours(*coordinates, Z, l, Ys, C.flatten())
 
 
-def plot_separation(last_function, Ys, C, n):
+def plot_separation(last_function, Ys, omega, my, C, n):
     '''
     Show how the training data is represented in the last layer. Also maps the rest of the possible points in the plane.
     
@@ -59,7 +59,7 @@ def plot_separation(last_function, Ys, C, n):
     '''
     grid, coordinates = get_discretization(Ys, n)
 
-    Z = last_function(grid)
+    Z = last_function(grid, omega, my)
     l = np.linspace(0,1,500)
 
     plot_contours(*coordinates, Z, l, Ys, C.flatten())
