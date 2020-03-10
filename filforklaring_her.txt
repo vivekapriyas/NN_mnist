@@ -1,0 +1,12 @@
+-Parametre_pop_plain.txt : oppnåde parametre for punkter i planet med vanilla plain gradient descent
+med h=0.05, K=20,tau=0.1,n=1000
+
+-spiral_adam_2000_it_0.1 : oppnådde parametre for punkter i planet med adam descent
+med h=0.1,K=20,n=2000
+
+-spiral_text_file.txt : treningsdatasett spiral 1000pkt
+-spiral_text_file2.txt : testdatasett spiral 1000pkt
+
+-ubyte-filer : fra MNIST databasen
+
+-files.py : funksjoner for å lese fra og skrive til fil
